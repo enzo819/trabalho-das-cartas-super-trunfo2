@@ -8,19 +8,19 @@ unsigned long int populacao;
 float area;
 float pib;
 int pontosturisticos;
-float densidadepopulacional = populacao / area;
-float pibpercapita = pib / populacao;
-float superPoder = populacao + area + pib + pontosturisticos + pibpercapita + (area / populacao);
+float densidadepopulacional  = populacao / area;
+float pibpercapita = populacao / pib;
+int superPoder = populacao + area + pib + pontosturisticos + pibpercapita + (area / populacao);
 
 printf("***Bem vindo ao jogo super trunfo***\n");
 printf("Por favor! Cadastre a Carta 1 para começarmos o jogo!!\n");
 printf("Carta 1: \n");
 
-printf("Digite o Estado: \n");
+printf("Digite o Estado utilizando uma letra de 'A' a 'H': \n");
 scanf("%c", &estado);
 printf("Estado: %c\n", estado);
 
-printf("Digite o Código: \n");
+printf("A letra do estado seguida de um número de 01 a 04 (ex: A01, B03) esse é o seu código!: \n");
 scanf("%s", &codigo);
 printf("Código: %s\n", codigo);
 
@@ -34,7 +34,7 @@ printf("População: %d\n", populacao);
 
 printf("Digite a área: \n");
 scanf("%f", &area);
-printf("Áreaa: %2.f km²\n", area);
+printf("Área: %2.f km²\n", area);
 
 printf("Digite o Pib: \n");
 scanf("%f", &pib);
@@ -51,25 +51,64 @@ printf("Aqui será exibida o Pib per capita: \n");
 printf("Pibpercapita: %f reais\n", pib / populacao);
 
 printf("Esse é o seu SuperPoder!!! , ele determinará todo seus atributos somados: \n");
-printf("SuperPoder: %f\n",  populacao + area + pib + pontosturisticos + pibpercapita + (area / populacao));
-
-printf("***Veja aqui seu cadastro da carta 1***\n");
-printf("Codigo: %s\n", &codigo);
-printf("Estado: %c\n", &estado);
-printf("Cidade: %s\n", &cidade);
-printf("População: %ld\n", &populacao);
-printf("Área: %2.f km²\n", &area);
-printf("Pib: %2.f bilhões de reais\n", &pib);
-printf("Pontos Turísticos: %d\n", &pontosturisticos);
-printf("DensidadePopulacional: %f hab/km²\n", &densidadepopulacional);
-printf("Pibpercapita: %f reais\n",&pibpercapita);
-printf("SuperPoder: %f\n",  &superPoder);
+printf("SuperPoder: %d\n",  populacao + area + pib + pontosturisticos + pibpercapita + (area / populacao));
 
 
 
 
 
 
+char estadO;
+char Codigo[10];
+char Cidade[20];
+unsigned long int Populacao;
+float Area;
+float Pib;
+int Pontosturisticos;
+float Densidadepopulacional = Populacao / Area;
+float Pibpercapita = Populacao / Pib;
+int SuperPoder = Populacao + Area + Pib + Pontosturisticos + Pibpercapita + (Area / Populacao);
+
+printf("*** Depois de ter cadastrado a primeira carta, cadastre outra para compararmos ***\n");
+printf("Por favor! Cadastre a Carta 2 para começarmos o jogo!!\n");
+printf("Carta 2: \n");
+
+printf("Digite o Estado utilizando uma letra de 'A' a 'H': \n");
+scanf("%s",&estadO);
+printf("Estado: %c\n", estadO);
+
+printf("A letra do estado seguida de um número de 01 a 04 (ex: A01, B03) esse é o seu código!: \n");
+scanf("%s", &Codigo);
+printf("Seu código é: %s\n", Codigo);
+
+printf("Digite a Cidade: \n");
+scanf("%s", &Cidade);
+printf("Cidade: %s\n", Cidade);
+
+printf("Digite sua População: \n");
+scanf("%ld", &Populacao);
+printf("População: %d\n", Populacao);
+
+printf("Digite a área: \n");
+scanf("%f", &Area);
+printf("Área: %2.f km²\n", Area);
+
+printf("Digite o Pib: \n");
+scanf("%f", &Pib);
+printf("Pib: %2.f bilhões de reais\n", Pib);
+
+printf("Digite a quantidade de PontosTurísticos: \n");
+scanf("%d", &Pontosturisticos);
+printf("Pontosturísticos: %d\n", Pontosturisticos);
+
+printf("Aqui será exibida a DensidadePopulacional \n");
+printf("DensidadePopulacional: %f hab/km²\n", Populacao / Area);
+
+printf("Aqui será exibida o Pib per capita: \n");
+printf("Pibpercapita: %f reais\n", Pib / Populacao);
+
+printf("Esse é o seu SuperPoder!!! , ele determinará todo seus atributos somados: \n");
+printf("SuperPoder: %d\n",  Populacao + Area + Pib + Pontosturisticos + Pibpercapita + (Area / Populacao));
 
 
 
@@ -86,4 +125,71 @@ printf("SuperPoder: %f\n",  &superPoder);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
 }
