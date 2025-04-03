@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 
 int main(){
 char estado;
@@ -10,7 +13,8 @@ float pib;
 int pontosturisticos;
 float densidadepopulacional  = populacao / area;
 float pibpercapita = populacao / pib;
-int superPoder = populacao + area + pib + pontosturisticos + pibpercapita + (area / populacao);
+float superpoder = (float)(populacao + area + pib + pontosturisticos + pibpercapita) + (-densidadepopulacional) ;
+long int comparacao;
 
 printf("***Bem vindo ao jogo super trunfo***\n");
 printf("Por favor! Cadastre a Carta 1 para começarmos o jogo!!\n");
@@ -29,7 +33,7 @@ scanf("%s", &cidade);
 printf("Cidade: %s\n", cidade);
 
 printf("Digite sua População: \n");
-scanf("%ld", &populacao);
+scanf("%d", &populacao);
 printf("População: %d\n", populacao);
 
 printf("Digite a área: \n");
@@ -45,21 +49,20 @@ scanf("%d", &pontosturisticos);
 printf("Pontosturísticos: %d\n", pontosturisticos);
 
 printf("Aqui será exibida a DensidadePopulacional \n");
-printf("DensidadePopulacional: %f hab/km²\n", populacao / area);
+printf("DensidadePopulacional: %f hab/km²\n",  populacao / area);
 
 printf("Aqui será exibida o Pib per capita: \n");
-printf("Pibpercapita: %f reais\n", pib / populacao);
+printf("Pibpercapita: %f reais\n",  populacao / pib);
 
 printf("Esse é o seu SuperPoder!!! , ele determinará todo seus atributos somados: \n");
-printf("SuperPoder: %d\n",  populacao + area + pib + pontosturisticos + pibpercapita + (area / populacao));
-
+printf("SuperPoder: %ld\n", superpoder);  
 
 
 
 
 
 char estadO;
-char Codigo[10];
+char Codigo[20];
 char Cidade[20];
 unsigned long int Populacao;
 float Area;
@@ -67,7 +70,7 @@ float Pib;
 int Pontosturisticos;
 float Densidadepopulacional = Populacao / Area;
 float Pibpercapita = Populacao / Pib;
-int SuperPoder = Populacao + Area + Pib + Pontosturisticos + Pibpercapita + (Area / Populacao);
+float Superpoder = (float)(Populacao + Area + Pib + Pontosturisticos + Pibpercapita) + (-Densidadepopulacional);
 
 printf("*** Depois de ter cadastrado a primeira carta, cadastre outra para compararmos ***\n");
 printf("Por favor! Cadastre a Carta 2 para começarmos o jogo!!\n");
@@ -102,16 +105,67 @@ scanf("%d", &Pontosturisticos);
 printf("Pontosturísticos: %d\n", Pontosturisticos);
 
 printf("Aqui será exibida a DensidadePopulacional \n");
-printf("DensidadePopulacional: %f hab/km²\n", Populacao / Area);
+printf("DensidadePopulacional: %f hab/km²\n",  Populacao / Area);
 
 printf("Aqui será exibida o Pib per capita: \n");
-printf("Pibpercapita: %f reais\n", Pib / Populacao);
+printf("Pibpercapita: %f reais\n",Populacao / Pib);
 
 printf("Esse é o seu SuperPoder!!! , ele determinará todo seus atributos somados: \n");
-printf("SuperPoder: %d\n",  Populacao + Area + Pib + Pontosturisticos + Pibpercapita + (Area / Populacao));
+printf("SuperPoder: %d\n", Superpoder);
+
+printf("***Pronto, agora que já cadastramos nossas cartas podemos ver quem é o mais forte heheheeh!***");
+printf("Veja aqui as comparações dos atributos para ver quem ganhou\n");
 
 
-
+printf("População:\n");
+if (populacao > Populacao)
+{
+printf("Carta 1 venceu essa rodada!\n");
+} else{
+printf("Carta 2 venceu essa rodada!\n"); 
+}
+printf("Área:\n");
+if (area > Area)
+{
+printf("Carta 1 venceu essa rodada!\n");
+} else {
+ printf("Carta 2 venceu essa rodada!\n");
+}
+printf("Pib:\n");
+if (pib > Pib)
+{
+printf("Carta 1 venceu essa rodada!\n");
+} else {
+  printf("Carta 2 venceu essa rodada!\n"); 
+}
+printf("Pontos turísticos:\n");
+if (pontosturisticos > Pontosturisticos)
+{
+printf("Carta 1 venceu essa rodada!\n");
+} else
+{  printf("Carta 2 venceu essa rodada\n"); 
+}
+printf("Densidade Populacional:\n");
+if (densidadepopulacional > Densidadepopulacional)
+{
+printf("Carta 1 venceu essa rodada!\n");
+} else
+{  printf("Carta 2 venceu essa rodada!\n"); 
+}
+printf("Pib per capita:\n");
+if (pibpercapita > Pibpercapita)
+{
+printf("Carta 1 venceu essa rodada!\n");
+} else
+{  printf("Carta 2 venceu essa rodada!\n"); 
+}
+printf("Super poder:\n");
+if (superpoder > Superpoder)
+{
+printf("Carta 1 venceu essa rodada!\n");
+}else
+{printf("Carta 2 venceu essa rodada!\n"); 
+}
 
 
 
